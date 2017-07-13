@@ -1,0 +1,12 @@
+pip install selenium
+pip install urllib2
+pip install requests
+pip install bs4
+pip install time
+pip install json
+
+
+please note:
+1. purchase test on Amazon - couldn't get to payment form without being a user so this test ends on filling new user details instead of payment details .
+2. content_scraping- wasn't sure what do you mean by 3 sentences so i am printing the body of each page .
+3. API having token issues - needs more time 
