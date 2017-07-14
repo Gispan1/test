@@ -5,6 +5,9 @@ pip install bs4
 pip install time
 pip install json
 
+run command:
+1. go to test folder
+2. run "pytest test_suite.py"
 
 please note:
 1. purchase test on Amazon - couldn't get to payment form without being a user so this test ends on filling new user details instead of payment details .
