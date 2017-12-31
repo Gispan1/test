@@ -1,92 +1,78 @@
+
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-      <link rel="stylesheet" href="https://as-qa-eu-js-test.azurewebsites.net/static/dist/css/Login.css">
-      <title>BioCatch Test WebSite</title>
-      <script type="text/javascript" src="https://as-qa-eu-js-test.azurewebsites.net/static/dist/js/login.js"></script>
-   </head>
-   <body >
-       <div id="wrapper">
-           <div id="header">
-               <div class="container">
+    <head>
 
-                 <div class="row">
-            <div class="col-lg-3">
-               <div class="pull-left">
-                  <a href="http://rat-demo.azurewebsites.net/"><img class="brandLogo" src="https://as-qa-eu-js-test.azurewebsites.net/static/dist/img/logo.png"></a>
-               </div>
-            </div>
-            <div class="col-lg-7">
-               <div class="text-center title">
-               </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="pull-right ">
-                    <img class="steptitle" src="https://as-qa-eu-js-test.azurewebsites.net/static/dist/img/grumpy.jpg">
+
+        <title>Slave Frame for JS</title>
+    </head>
+    <body>
+        <div w3-include-html="/templates/Header.html"></div>
+        <script src="http://as-qa-eu-js-test.azurewebsites.net/static/dist/js/sloth_inc_slave.js"></script>
+        <div class="con">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="pull-left">
+
+                            <a href="http://as-dev-eu-js-test.azurewebsites.net/"><img class="brandLogo" src="http://as-qa-eu-js-test.azurewebsites.net/static/dist/img/logo.png"></a>
+                        </div>
                     </div>
+
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        First name: <input type="text" name="fname"><br>
+                            Last name: <input type="text" name="lname"><br>
+                                <button type="submit" value="Submit">Submit</button>
+                                <button type="reset" value="Reset">Reset</button><br>
+                                <input id="checkBox" type="checkbox">Checkbox Test<br>
+                                    <input type="radio" name="gender" value="male"> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
+                                            <input type="radio" name="gender" value="other"> Other
+
+                                                </div>
+                    <div class="col-lg-8">
+
+
+                    </div>
+                </div>
+                <hr>
+                <br>
+
+                <div class="row content">
+                    <div id="forms" class="col-lg-8">
+                        <form class="form-horizontal " role="form">
+                            <br>
+
+                            </div>
+
+                    </form>
+
+                </div>
+                <div class="col-lg-4">
+
+
+                </div>
+                <div class="col-lg-8">
+                    <div class="text-right">
+                        <!--- <img class="" src="{% static "/static/dist/img/girl_with_mustache.png" %}">-->
+                        <!--img class="stretch" src="/static/dist/img/cando.jpg"> -->
+                            </div>
+
+                </div>
+
+
             </div>
-         </div>
-                    <hr>
-                   </div>
-           </div>
-           	<div id="content">
-                  <div class="container ">
 
-         <div  class="row ">
-            <div id="login"  class=" col-lg-3 ">
-               <div class="panel shadow-style-2 transparentBackground">
-                  <div style="padding-top:30px" class="panel-body" >
-                     <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-                     <form id="loginform" class="form-horizontal"  role="form"  autocomplete="off" enctype="multipart/form-data" method="POST">
-                        <div style="margin-bottom: 25px" class="input-group">
-                           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                           <input id="login-username" type="text" class="form-control" name="UserID" value="" placeholder="username ">
-                        </div>
-                        <div style="margin-bottom: 25px" class="input-group">
-                           <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                           <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
-                        </div>
-                        <div style="margin-top:10px" class="form-group">
-                           <!-- Button -->
-                           <div class="col-sm-4 controls">
-                              <a id="btn-login" href="#" class="btn btn-bio"><b>Login</b></a>
-                              <div id="load" class="tip">
-                                 <i class="fa fa-2x fa-circle-o-notch fa-spin "></i>
-                              </div>
-                           </div>
-                           <div class="col-sm-8 controls ">
-                              <label id="tip" class="panel panel-default tip shadow"  ><b> Invalid Details</b></label>
-                           </div>
-                        </div>
-                        <div style="margin-bottom: 25px" class="input-group">
-                           <b>Trouble logging in?<br>
-                        </div>
-                     </form>
-                  </div>
-               </div>
+            <hr>
+            <div class="row">
+
             </div>
-
-            <!----<div class=" col-lg-12 ">-->
-               <div class="col-lg-offset-6 col-lg-6 ">
-               <div class="">
-                  <div id="background">
-                     <!----<img class="stretch" src="{% static "/static/dist/img/girl_with_mustache.png" %}">-->
-                        <img class="stretch" src="https://as-qa-eu-js-test.azurewebsites.net/static/dist/img/unicorn.png">
-                      <!----<img class="stretch" src="{% static "/static/dist/img/login_impl.jpg" %}">-->
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-
-               </div>
-		    <div id="footer">
-            </div>
-            <center>
-        <iframe width="500" height="300" style="scrolling:auto;" src="https://gispan1.github.io/test/"></iframe>
-            </center>
-
-
-       </div>
-
-   </body>
+        </div>
+        </div>
+    </body>
 </html>
