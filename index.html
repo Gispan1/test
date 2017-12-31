@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-{% load staticfiles %}
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
    <head>
-      {% include  "Header.html" %}
-      <link rel="stylesheet" href="{% static "dist/css/Login.css"%}">
+      <link rel="stylesheet" href="https://as-qa-eu-js-test.azurewebsites.net/static/dist/css/Login.css">
       <title>BioCatch Test WebSite</title>
-      <script type="text/javascript" src="{% static "dist/js/login.js"%}"></script>
+      <script type="text/javascript" src="https://as-qa-eu-js-test.azurewebsites.net/static/dist/js/login.js"></script>
    </head>
    <body >
        <div id="wrapper">
@@ -15,17 +13,16 @@
                  <div class="row">
             <div class="col-lg-3">
                <div class="pull-left">
-                  <a href="http://rat-demo.azurewebsites.net/"><img class="brandLogo" src="{% static "dist/img/logo.png"%}"></a>
+                  <a href="http://rat-demo.azurewebsites.net/"><img class="brandLogo" src="https://as-qa-eu-js-test.azurewebsites.net/static/dist/img/logo.png"></a>
                </div>
             </div>
             <div class="col-lg-7">
                <div class="text-center title">
-                  <h1>(1.4) Test New Version</h1>
                </div>
             </div>
             <div class="col-lg-2">
                 <div class="pull-right ">
-                    <img class="steptitle" src="{% static "dist/img/grumpy.jpg"%}">
+                    <img class="steptitle" src="https://as-qa-eu-js-test.azurewebsites.net/static/dist/img/grumpy.jpg">
                     </div>
             </div>
          </div>
@@ -41,7 +38,6 @@
                   <div style="padding-top:30px" class="panel-body" >
                      <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
                      <form id="loginform" class="form-horizontal"  role="form"  autocomplete="off" enctype="multipart/form-data" method="POST">
-                        {% csrf_token %}
                         <div style="margin-bottom: 25px" class="input-group">
                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                            <input id="login-username" type="text" class="form-control" name="UserID" value="" placeholder="username ">
@@ -64,7 +60,6 @@
                         </div>
                         <div style="margin-bottom: 25px" class="input-group">
                            <b>Trouble logging in?<br>
-                           e-mail us at <a href="mailto:RATforce@BioCatch.com">shirley@BioCatch.com</a> </b>
                         </div>
                         <div id="Error-message" style="margin-bottom: 25px" class="input-group redBase tip">
                            <b>Error: Demo only works on PC with Chrome/Firefox/Explorer</b>
@@ -79,7 +74,7 @@
                <div class="">
                   <div id="background">
                      <!----<img class="stretch" src="{% static "/static/dist/img/girl_with_mustache.png" %}">-->
-                        <img class="stretch" src="{% static "/static/dist/img/unicorn.png" %}">
+                        <img class="stretch" src="https://as-qa-eu-js-test.azurewebsites.net/static/dist/img/unicorn.png">
                       <!----<img class="stretch" src="{% static "/static/dist/img/login_impl.jpg" %}">-->
                   </div>
                </div>
@@ -89,10 +84,9 @@
 
                </div>
 		    <div id="footer">
-                {% include "Footer.html" %}
             </div>
             <center>
-        <iframe width="500" height="300"style="scrolling:auto;"src="https://gispan.me/testBC/landingBc.html"></iframe>
+        <iframe width="500" height="300" style="scrolling:auto;" src="https://gispan1.github.io/test/"></iframe>
             </center>
 
 
@@ -112,7 +106,7 @@
                    }
                }
            }
-       $(document).ready(fireWhenReady);	
+       $(document).ready(fireWhenReady);
            </script>
    </body>
 </html>
