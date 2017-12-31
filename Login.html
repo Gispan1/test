@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      {% include  "Header.html" %}
+      <link rel="stylesheet" href="{% static "dist/css/Login.css"%}">
+      <title>BioCatch Test WebSite</title>
+      <script type="text/javascript" src="{% static "dist/js/login.js"%}"></script>
+   </head>
+   <body >
+       <div id="wrapper">
+           <div id="header">
+               <div class="container">
+
+                 <div class="row">
+            <div class="col-lg-3">
+               <div class="pull-left">
+                  <a href="http://rat-demo.azurewebsites.net/"><img class="brandLogo" src="{% static "dist/img/logo.png"%}"></a>
+               </div>
+            </div>
+            <div class="col-lg-7">
+               <div class="text-center title">
+                  <h1>(1.4) Test New Version</h1>
+               </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="pull-right ">
+                    <img class="steptitle" src="{% static "dist/img/grumpy.jpg"%}">
+                    </div>
+            </div>
+         </div>
+                    <hr>
+                   </div>
+           </div>
+           	<div id="content">
+                  <div class="container ">
+
+         <div  class="row ">
+            <div id="login"  class=" col-lg-3 ">
+               <div class="panel shadow-style-2 transparentBackground">
+                  <div style="padding-top:30px" class="panel-body" >
+                     <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                     <form id="loginform" class="form-horizontal"  role="form"  autocomplete="off" enctype="multipart/form-data" method="POST">
+                        {% csrf_token %}
+                        <div style="margin-bottom: 25px" class="input-group">
+                           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                           <input id="login-username" type="text" class="form-control" name="UserID" value="" placeholder="username ">
+                        </div>
+                        <div style="margin-bottom: 25px" class="input-group">
+                           <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                           <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                        </div>
+                        <div style="margin-top:10px" class="form-group">
+                           <!-- Button -->
+                           <div class="col-sm-4 controls">
+                              <a id="btn-login" href="#" class="btn btn-bio"><b>Login</b></a>
+                              <div id="load" class="tip">
+                                 <i class="fa fa-2x fa-circle-o-notch fa-spin "></i>
+                              </div>
+                           </div>
+                           <div class="col-sm-8 controls ">
+                              <label id="tip" class="panel panel-default tip shadow"  ><b> Invalid Details</b></label>
+                           </div>
+                        </div>
+                        <div style="margin-bottom: 25px" class="input-group">
+                           <b>Trouble logging in?<br>
+                           e-mail us at <a href="mailto:RATforce@BioCatch.com">shirley@BioCatch.com</a> </b>
+                        </div>
+                        <div id="Error-message" style="margin-bottom: 25px" class="input-group redBase tip">
+                           <b>Error: Demo only works on PC with Chrome/Firefox/Explorer</b>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+
+            <!----<div class=" col-lg-12 ">-->
+               <div class="col-lg-offset-6 col-lg-6 ">
+               <div class="">
+                  <div id="background">
+                     <!----<img class="stretch" src="{% static "/static/dist/img/girl_with_mustache.png" %}">-->
+                        <img class="stretch" src="{% static "/static/dist/img/unicorn.png" %}">
+                      <!----<img class="stretch" src="{% static "/static/dist/img/login_impl.jpg" %}">-->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+               </div>
+		    <div id="footer">
+                {% include "Footer.html" %}
+            </div>
+            <center>
+        <iframe width="500" height="300"style="scrolling:auto;"src="https://gispan.me/testBC/landingBc.html"></iframe>
+            </center>
+
+
+       </div>
+       <script type='text/javascript'>
+           function fireWhenReady() {
+               var count = 0;
+               if (typeof cdApi != 'undefined') {
+                   cdApi.changeContext(cdApi.CONTEXT_TYPE.LOGIN_1);
+                   console.log("sending context to server");
+                   count = 1
+               }
+               else {
+                   if (count == 0){
+                       setTimeout(fireWhenReady, 200);
+                       console.log("sending context to server");
+                   }
+               }
+           }
+       $(document).ready(fireWhenReady);	
+           </script>
+   </body>
+</html>
